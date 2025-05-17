@@ -7,7 +7,22 @@ namespace Homework4
     {
         static void Main()
         {
+            DisplayAsciiTable();
+        }
+        
+        static void DisplayAsciiTable()
+        {
+            char[] charsList = new char[26];
             
+            for (int i = 0; i < charsList.Length; i++)
+            {
+                charsList[i] = (char)('a' + i);
+            }
+
+            foreach (char ch in charsList)
+            {
+                Console.WriteLine($"'{ch}' -> ASCII: {(int)ch}");
+            }
         }
     }
 }
